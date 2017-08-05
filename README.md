@@ -12,22 +12,20 @@ Run:
 ```
 git clone https://github.com/wuli133144/http_callback_serve_version0.3.git
 ```
-and copy all files to you source code tree.
-then go to ./src/core/ 
-Run ```gcc serve_http.c -o start -lpthread``` to compile and run tests.
+and copy all files to you source code tree.then go to ./src/core 
+*Run ```gcc serve_http.c -o start -lpthread``` to compile and run tests.
 
 ## Examples
 ### config
-'''
+'''c
 go to conf/config modify it to yourself ipaddress
 '''
 
 ```
 Calling ```callback function() is core driver``` :  
 ```
-
-...
 some phony code:
+'''
    http_request *req=tcp->callback(tcp->http_contxt,                                 \
                                                   onRecv,tcp->fd,                    \
                                                   (char *)tcp->buf,READ_COUNT);
