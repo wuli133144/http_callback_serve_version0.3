@@ -17,20 +17,20 @@ and copy all files to you source code tree.then go to ./src/core
 
 ## Examples
 ### config
-'''c
+'''
 go to conf/config modify it to yourself ipaddress
 '''
 
 ```
-Calling ```callback function() is core driver``` :  
+Calling ```callback function() is core driver```  
 ```
-some phony code:
-```c
+some code:
+```
 -------------------------------------------------------------------------------------
    http_request *req=tcp->callback(tcp->http_contxt,                                 \
                                                   onRecv,tcp->fd,                    \
                                                   (char *)tcp->buf,READ_COUNT);
-    ---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 ```
     http_request * callback(http_context *http_ctx,func_t f_recv,int fd,char *buf,size_t len){
              
@@ -42,7 +42,7 @@ some phony code:
 
                    printf("2>>>>[%s]\n",buf);
                    return http_ctx->parse_req(http_ctx->buf);
-}                          
+                          
                      
 ```
 
